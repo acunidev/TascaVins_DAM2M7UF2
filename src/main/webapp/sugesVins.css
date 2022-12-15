@@ -1,0 +1,59 @@
+body {
+  background-image: url("img/tiendaVinos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  width: 100%;
+  font-size: 3em;
+  color: black;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.imgVins p {
+  font-size: xx-large;
+}
+
+.imgVins img {
+  padding-top: 15px;
+  /*width: 170px;*/
+  /*height: 250px;*/
+  width: 75px;
+  height: 250px;
+}
+
+.contenedor {
+  width: 85%;
+  margin: auto;
+  border-radius: 45px 45px 45px 45px;
+  -moz-border-radius: 45px 45px 45px 45px;
+  -webkit-border-radius: 45px 45px 45px 45px;
+  background: rgba(127, 127, 127, 0.8);
+  -webkit-box-shadow: 0px 0px 22px 19px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 22px 19px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 22px 19px rgba(0, 0, 0, 0.5);
+}
+
+table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+td {
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+/*
+width 85%
+margin auto
+*/

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link href="styles.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Selecció de vins</title>
+</head>
+
+<body>
+<div class="formulari">
+  <h1>Pàgina de selecció de vins</h1>
+  <p>Selecciona opció:</p>
+  <form action="SelectVi.do" focus="color" method="POST">
+    Color: <select name="color">
+    <option value="negre">negre</option>
+    <option value="rosat">rosat</option>
+    <option value="blanc">blanc</option>
+  </select>
+    <br/>
+    <p id="acordBtn">
+      <button type="submit" value="Submit">D'acord</button>
+    </p>
+  </form>
+</div>
+</body>
+</html>

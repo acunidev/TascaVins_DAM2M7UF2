@@ -1,0 +1,13 @@
+version: "1"
+services:
+  projecte-vins-db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=vinsDB
+  projecte-vins-app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - projecte-vins-db
