@@ -29,17 +29,20 @@ public class ViSelectionAction extends HttpServlet {
   private void addVins(ViExpert viExpert) {
 //    Vins Rosats
     for (int index = 0; index < VinsUtils.vinsRosats.length; index++) {
-      viExpert.addVins(new Vins(VinsUtils.vinsRosats[index], VinsUtils.ROSAT, VinsUtils.vinsRosatsPathImg[index]));
+      viExpert.addVins(new Vins(VinsUtils.vinsRosats[index], VinsUtils.ROSAT,
+                                VinsUtils.vinsRosatsPathImg[index]));
     }
 
 //    Vins Blancs
     for (int index = 0; index < VinsUtils.vinsBlancs.length; index++) {
-      viExpert.addVins(new Vins(VinsUtils.vinsBlancs[index], VinsUtils.BLANC, VinsUtils.vinsBlancsPathImg[index]));
+      viExpert.addVins(new Vins(VinsUtils.vinsBlancs[index], VinsUtils.BLANC,
+                                VinsUtils.vinsBlancsPathImg[index]));
     }
 
 //    Vins Negres
     for (int index = 0; index < VinsUtils.vinsNegres.length; index++) {
-      viExpert.addVins(new Vins(VinsUtils.vinsNegres[index], VinsUtils.NEGRE, VinsUtils.vinsNegresPathImg[index]));
+      viExpert.addVins(new Vins(VinsUtils.vinsNegres[index], VinsUtils.NEGRE,
+                                VinsUtils.vinsNegresPathImg[index]));
     }
   }
 
@@ -55,14 +58,9 @@ public class ViSelectionAction extends HttpServlet {
     for (Vins vi : marques) {
       final boolean isSameType = vi.getTipus().equals(tipusVi);
       if (isSameType) {
-        printWriter.printf(
-            "<td class='imgVins'>"
-                + "<img src='%s' alt='%s'>"
-                + "<p>%s</p>"
-                + "</td>",
-            vi.getImgPath(),
-            vi.getNom(), vi.getNom());
-        printWriter.println();
+        printWriter.printf("<td class='imgVins'><img src='%s' alt='%s'><p>%s</p></td>",
+                           vi.getImgPath(), vi.getNom(), vi.getNom())
+            .println();
       }
     }
     printWriter.println("</tr>");
@@ -71,19 +69,14 @@ public class ViSelectionAction extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException, IOException {
-    // TODO document why this method is empty
-  }
+      throws ServletException, IOException {/* TODO document why this method is empty */}
 
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     String tipusVi = request.getParameter("color");
-
     ViExpert viExpert = new ViExpert();
-    addVins(viExpert);
-
-//    HTML
+    addVins(viExpert);/*    HTML */
     response.setContentType("text/html");
     try (PrintWriter printWriter = response.getWriter()) {
       printWriter.println("<head>");
@@ -93,14 +86,11 @@ public class ViSelectionAction extends HttpServlet {
       printWriter.println("<body>");
       printWriter.println("<div class='contenedor'>");
       printWriter.println("<H1>Marques de Vi " + tipusVi + " suggerides</H1>");
-
       printTable(tipusVi, viExpert, printWriter);
-
       printWriter.println("</div>");
       printWriter.println("");
       printWriter.println("</body>");
       printWriter.println("</html>");
     }
-
   }
 }
