@@ -16,7 +16,5 @@ J
 src/main/webapp/styles.css,a/5/a528d543f5b88a435b4532b41af24e79b3ccc297
 T
 $.idea/codeStyles/codeStyleConfig.xml,d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba
-J
-src/main/webapp/index.html,1/3/1337d72a3b1928dba82aa5210f5cdc0e88ce895b
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec

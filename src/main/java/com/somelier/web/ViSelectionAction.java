@@ -28,21 +28,21 @@ public class ViSelectionAction extends HttpServlet {
    */
   private void addVins(ViExpert viExpert) {
 //    Vins Rosats
-    for (int index = 0; index < VinsUtils.vinsRosats.length; index++) {
-      viExpert.addVins(new Vins(VinsUtils.vinsRosats[index], VinsUtils.ROSAT,
-                                VinsUtils.vinsRosatsPathImg[index]));
+    for (int index = 0; index < VinsUtils.VINS_ROSATS.length; index++) {
+      viExpert.addVins(new Vins(VinsUtils.VINS_ROSATS[index], VinsUtils.ROSAT,
+                                VinsUtils.VINS_ROSATS_PATH_IMG[index]));
     }
 
 //    Vins Blancs
-    for (int index = 0; index < VinsUtils.vinsBlancs.length; index++) {
-      viExpert.addVins(new Vins(VinsUtils.vinsBlancs[index], VinsUtils.BLANC,
-                                VinsUtils.vinsBlancsPathImg[index]));
+    for (int index = 0; index < VinsUtils.VINS_BLANCS.length; index++) {
+      viExpert.addVins(new Vins(VinsUtils.VINS_BLANCS[index], VinsUtils.BLANC,
+                                VinsUtils.VINS_BLANCS_PATH_IMG[index]));
     }
 
 //    Vins Negres
-    for (int index = 0; index < VinsUtils.vinsNegres.length; index++) {
-      viExpert.addVins(new Vins(VinsUtils.vinsNegres[index], VinsUtils.NEGRE,
-                                VinsUtils.vinsNegresPathImg[index]));
+    for (int index = 0; index < VinsUtils.VINS_NEGRES.length; index++) {
+      viExpert.addVins(new Vins(VinsUtils.VINS_NEGRES[index], VinsUtils.NEGRE,
+                                VinsUtils.VINS_NEGRES_PATH_IMG[index]));
     }
   }
 
